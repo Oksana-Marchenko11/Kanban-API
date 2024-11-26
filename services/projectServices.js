@@ -1,4 +1,4 @@
-import { Project } from "../models/Poject.js";
+import { Project} from "../models/Project.js";
 
 // export const getAll = () => Project.find();
 

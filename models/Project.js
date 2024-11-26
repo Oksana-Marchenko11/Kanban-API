@@ -22,10 +22,20 @@ const projectSchema = new mongoose.Schema(
 
 export const Project = mongoose.model("Project", projectSchema);
 
+const columnSchema = new mongoose.Schema(
+  {
+    name: String,
+    projectId: String,
+          })
+
+export const Column = mongoose.model("Column", columnSchema);
+
 const taskstSchema = new mongoose.Schema(
   {
     name: String,
-  },
+    projectId: String,
+    columnId: String,
+      },
   {
     versionKey: false,
     timestamps: true,
@@ -33,3 +43,7 @@ const taskstSchema = new mongoose.Schema(
 );
 
 export const Task = mongoose.model("Task", taskstSchema);
+
+
+
+  

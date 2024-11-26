@@ -6,6 +6,7 @@ import animalRouter from "./rotes/animalsRouters.js";
 import familyRouter from "./rotes/familyRouters.js";
 import projectRouter from "./rotes/projectRoutes.js";
 import tasksRouter from "./rotes/tasksRouters.js";
+import columnRouter from "./rotes/columnRouters.js";
 import dotenv from "dotenv";
 
 dotenv.config(); // додає в налаштування компютера дані, що знаходяться в .env
@@ -19,6 +20,7 @@ app.use("/api/animals", animalRouter);
 app.use("/api/family", familyRouter);
 app.use("/api/project", projectRouter);
 app.use("/api/tasks", tasksRouter);
+app.use("/api/column", columnRouter);
 
 app.use((req, res) => res.status(404).json({ message: "Not found" }));
 
