@@ -15,6 +15,14 @@ export const getById = async (id) => {
     return columnById;
   } catch (error) {}
 };
+
+export const getByProjectId = async (id) => {
+  try {
+    const columnByProjectId = await Column.findByProjectId(id);
+    return columnById;
+  } catch (error) {}
+};
+
 export const newColumn = async (column) => {
   try {
     const columnNew = await Column.create(column);

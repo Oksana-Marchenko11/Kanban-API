@@ -10,12 +10,14 @@ export const getAll = async () => {
     throw new Error("Failed to fetch projects from MongoDB");
   }
 };
+
 export const getById = async (id) => {
   try {
     const projectById = await Project.findById(id);
     return projectById;
   } catch (error) {}
 };
+
 export const newProject = async (task) => {
   try {
     const projectNew = await Project.create(task);
