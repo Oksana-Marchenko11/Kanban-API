@@ -16,10 +16,10 @@ export const getById = async (id) => {
   } catch (error) {}
 };
 
-export const getByProjectId = async (id) => {
+export const getByProjectId = async (projectId) => {
   try {
-    const columnByProjectId = await Column.findByProjectId(id);
-    return columnById;
+    const columnByProjectId = await Column.find({ "projectId": projectId });
+    return columnByProjectId;
   } catch (error) {}
 };
 
