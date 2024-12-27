@@ -1,4 +1,9 @@
-import { getAll, getById, newColumn, getByProjectId } from "../services/columnServise.js";
+import {
+  getAll,
+  getById,
+  newColumn,
+  getByProjectId,
+} from "../services/columnServise.js";
 
 export const getAllColumn = async (req, res, next) => {
   try {
@@ -30,7 +35,8 @@ export const createNewColumn = async (req, res, next) => {
 export const columnByProjectId = async (req, res, next) => {
   try {
     const column = await getByProjectId(req.params.projectId);
-      res.json(column);
-  } catch (error){
+    res.json(column);
+  } catch (error) {
     next(error);
-  }};
+  }
+};

@@ -3,6 +3,7 @@ import {
   getAllProject,
   projectById,
   createNewProject,
+  projectByName
 } from "../controllers/projectControllers.js";
 
 const projectRouter = express.Router();
@@ -10,6 +11,6 @@ const projectRouter = express.Router();
 projectRouter.get("/", getAllProject);
 projectRouter.get("/:id", projectById);
 projectRouter.post("/", createNewProject);
-// projectRouter.put("/:id", familyControllers.updateByIdFamily);
-// projectRouter.delete("/:id", familyControllers.deleteFamilyById);
+projectRouter.get("/name/:name", projectByName)
+
 export default projectRouter;

@@ -24,3 +24,10 @@ export const newProject = async (task) => {
     return projectNew;
   } catch (error) {}
 };
+
+export const getByName = async (projectName) => {
+  try {
+    const projectByName = await Project.find({ "name": projectName });
+    return projectByName;
+  } catch (error) {}
+};
