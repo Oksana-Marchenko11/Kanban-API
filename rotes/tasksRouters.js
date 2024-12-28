@@ -10,6 +10,5 @@ const tasksRouter = express.Router();
 tasksRouter.get("/", getAllTasks);
 tasksRouter.get("/:id", getTasksById);
 tasksRouter.post("/", createNewTask);
-// projectRouter.put("/:id", familyControllers.updateByIdFamily);
-// projectRouter.delete("/:id", familyControllers.deleteFamilyById);
+
 export default tasksRouter;

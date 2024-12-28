@@ -1,4 +1,4 @@
-import { Column } from "../models/Project.js";
+import { Column } from "../models/Colomns.js";
 
 export const getAll = async () => {
   try {
@@ -18,7 +18,7 @@ export const getById = async (id) => {
 
 export const getByProjectId = async (projectId) => {
   try {
-    const columnByProjectId = await Column.find({ "projectId": projectId });
+    const columnByProjectId = await Column.find({ projectId: projectId });
     return columnByProjectId;
   } catch (error) {}
 };
