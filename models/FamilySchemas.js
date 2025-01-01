@@ -4,7 +4,7 @@ import BaseSchema from "./baseSchema";
 export default model(
   "project",
   new BaseSchema({
-    progectName: {
+    projectName: {
       type: String,
       required: [true, "Value is required"],
     },

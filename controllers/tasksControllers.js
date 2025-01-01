@@ -8,6 +8,7 @@ export const getAllTasks = async (req, res, next) => {
     next(error);
   }
 };
+
 export const getTasksById = async (req, res, next) => {
   try {
     const task = await getById(req.params.id);
@@ -16,6 +17,7 @@ export const getTasksById = async (req, res, next) => {
     next(error);
   }
 };
+
 export const createNewTask = async (req, res, next) => {
   try {
     console.log(req.body);

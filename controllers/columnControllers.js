@@ -22,6 +22,7 @@ export const columnById = async (req, res, next) => {
     next(error);
   }
 };
+
 export const createNewColumn = async (req, res, next) => {
   try {
     console.log(req.body);

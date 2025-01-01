@@ -55,6 +55,7 @@ const updateByIdFamily = async (req, res, next) => {
     next(error);
   }
 };
+
 const deleteFamilyById = async (req, res, next) => {
   try {
     const deleteFamilyMember = await serviceFunctions.deleteById(req.params.id);
@@ -63,6 +64,7 @@ const deleteFamilyById = async (req, res, next) => {
     next(error);
   }
 };
+
 export default {
   getAllFamily,
   getByIdFamily,

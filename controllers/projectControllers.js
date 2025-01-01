@@ -18,6 +18,7 @@ export const projectById = async (req, res, next) => {
     next(error);
   }
 };
+
 export const createNewProject = async (req, res, next) => {
   try {
     console.log(req.body);
@@ -27,6 +28,7 @@ export const createNewProject = async (req, res, next) => {
     next(error);
   }
 };
+
 export const projectByName = async (req, res, next) => {
   try {
     const project = await getByName(req.params.name);
