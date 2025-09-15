@@ -24,11 +24,12 @@ app.use((err, req, res, next) => {
   const { status = 500, message = "Server error" } = err;
   res.status(status).json({ message: message });
 });
+
 mongoose
   .connect(process.env.DB_HOST)
   .then(() => {
-    app.listen(3000, () => {
-      console.log("Example app listening on port 3000!");
+    app.listen(process.env.PORT, () => {
+      console.log("Example app listening on port: ", process.env.PORT);
     });
   })
   .catch((error) => {

@@ -3,7 +3,7 @@ import {
   getAllProject,
   projectById,
   createNewProject,
-  projectByName,
+  projectByName
 } from "../controllers/projectControllers.js";
 
 const projectRouter = express.Router();

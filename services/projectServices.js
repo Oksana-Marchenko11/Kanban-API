@@ -27,7 +27,7 @@ export const newProject = async (task) => {
 
 export const getByName = async (projectName) => {
   try {
-    const projectByName = await Project.find({ name: projectName });
+    const projectByName = await Project.find({ "name": projectName });
     return projectByName;
   } catch (error) {}
 };
