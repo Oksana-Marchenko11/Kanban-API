@@ -2,8 +2,6 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import morgan from "morgan";
-import animalRouter from "./rotes/animalsRouters.js";
-import familyRouter from "./rotes/familyRouters.js";
 import projectRouter from "./rotes/projectRoutes.js";
 import tasksRouter from "./rotes/tasksRouters.js";
 import columnRouter from "./rotes/columnRouters.js";
@@ -16,8 +14,6 @@ app.use(express.json()); // Дозволяє обробляти JSON-дані, �
 app.use(morgan("tiny"));
 app.use(cors());
 
-app.use("/api/animals", animalRouter);
-app.use("/api/family", familyRouter);
 app.use("/api/project", projectRouter);
 app.use("/api/tasks", tasksRouter);
 app.use("/api/column", columnRouter);

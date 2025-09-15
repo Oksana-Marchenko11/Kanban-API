@@ -1,4 +1,9 @@
-import { getAll, getById, newTask } from "../services/tasksServices.js";
+import {
+  getAll,
+  getById,
+  newTask,
+  getByProjectAndColumnId,
+} from "../services/tasksServices.js";
 
 export const getAllTasks = async (req, res, next) => {
   try {
@@ -23,6 +28,15 @@ export const createNewTask = async (req, res, next) => {
     console.log(req.body);
     const createdTask = await newTask(req.body);
     res.json(createdTask);
+  } catch (error) {
+    next(error);
+  }
+};
+export const getTasksByProjectAndColumnId = async (req, res, next) => {
+  try {
+    console.log(req.body);
+    const tasks = await getByProjectAndColumnId(req.body);
+    res.json(tasks);
   } catch (error) {
     next(error);
   }

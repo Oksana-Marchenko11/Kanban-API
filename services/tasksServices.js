@@ -21,3 +21,12 @@ export const newTask = async (task) => {
     return taskNew;
   } catch (error) {}
 };
+export const getByProjectAndColumnId = async (projectId, columnId) => {
+  try {
+    const tasksByProjectAndColumnId = await Task.find({
+      projectId: projectId,
+      columnId: columnId,
+    });
+    return tasksByProjectAndColumnId;
+  } catch (error) {}
+};

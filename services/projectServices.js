@@ -1,4 +1,4 @@
-import { Project} from "../models/Project.js";
+import { Project } from "../models/Project.js";
 
 // export const getAll = () => Project.find();
 
@@ -27,7 +27,7 @@ export const newProject = async (task) => {
 
 export const getByName = async (projectName) => {
   try {
-    const projectByName = await Project.find({ "name": projectName });
+    const projectByName = await Project.find({ name: projectName });
     return projectByName;
   } catch (error) {}
 };

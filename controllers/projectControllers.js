@@ -1,4 +1,9 @@
-import { getAll, getById, newProject, getByName } from "../services/projectServices.js";
+import {
+  getAll,
+  getById,
+  newProject,
+  getByName,
+} from "../services/projectServices.js";
 // import HttpError from "../helpers/error.js";
 
 export const getAllProject = async (req, res, next) => {
